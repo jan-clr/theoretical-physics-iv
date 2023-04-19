@@ -12,6 +12,7 @@
 \usepackage[english]{babel}                     % font that supports English
 \usepackage{upgreek}                            % non-cursive Greek letters
 \usepackage[stretch=10,shrink=10,protrusion=true,expansion=true,final]{microtype} % prettier block format
+\usepackage[onehalfspacing]{setspace}           % control the spacing between lines and in enumeration lists
 \usepackage{hyperref}                           % links for everything
 \usepackage{color}                              % allows for setting in different colors
 \usepackage[autooneside=false,automark]{scrlayer-scrpage} % page-style with "Kolumnentitel" (title of current chapter is displayed at the top)
@@ -23,7 +24,6 @@
 \usepackage{xspace}                             % works to improve own commands and provides "\xspace"-command, that puts a space if needed
 \usepackage{ifthen}                             % more control over non-obligatory parameters
 \usepackage{titling}                            % get title values as macros
-\usepackage[onehalfspacing]{setspace}           % control the spacing between lines and in enumeration lists
 \usepackage[backend=biber, style=phys, biblabel=brackets, url=true]{biblatex} % citations with "modern" backend and an physics-accepted citation style
 \usepackage{graphicx}                           % work with graphics 
 \usepackage{ragged2e}                           % ragged-commands (when no block format is wanted)
@@ -47,6 +47,7 @@
     \usetikzlibrary{positioning}
 \usepackage[toc, page]{appendix}
 %\usepackage{parskip}
+\usepackage{tcolorbox}                          % Color boxes
 
 \title{Notes for the lecture about Theoretical Electrodynamics}
 \author{Jan Claar}
@@ -58,11 +59,12 @@
 
 \begin{document}
     \tableofcontents
-    \section{Introduction} % (fold)
-    \label{sec:Introduction}
     \newpage
 
-    Lecurer: Abhinav Sharma (Abhi)
+    \section{Lecture Information} % (fold)
+    \label{sec:Lecture Information}
+
+    Lecturer: Abhinav Sharma (Abhi)
     
     Room: R 516
 
@@ -70,8 +72,16 @@
 
     Jackson "Classical Electrodynamics" - Reference text
 
-    % section Introduction (end)
+    Feynman Lectures "Volume II" - Supplementary
+            
+    % section Lecture Information (end)
 
+    \section{Introduction} % (fold)
+    \label{sec:Introduction}
+
+    $\curl\grad\div \v}$
+
+    % section Introduction (end)
 
 
 \end{document}
