@@ -16,3 +16,27 @@
 %! replace German quotation marks with English ones (I always write the left and right quotes explicitly with the German command variants as they are nice to debug and already in my macros. Then in the end, I can swap them with the desired replacement quotes of my choice) 
 \renewcommand*{\glqq}{``}
 \renewcommand*{\grqq}{''}
+
+\makeatletter
+\gdef\teachers#1{\gdef\@teachers{#1}}
+\def\@teachers{No Instructors}
+\gdef\exnr#1{\gdef\@exnr{#1}}
+\def\@exnr{1}
+% Horizontale Linie mit Abstand zu den Seitenrändern
+\newcommand{\ownline}{\vspace{-1.0em}\hrule}
+
+% Aufgabenkopf
+\newcommand{\exercise}[1]{\vspace*{0.5cm}\large{\color{dblue}\textbf{Aufgabe #1}}\normalsize\vspace*{0.2cm}\\}
+
+% Befehl zum Erzeugen des Kopfes
+\newcommand{\head}{
+    {\color{dblue}\textbf{Elektrodynamik und Hydrodynamik} SoSe 23\hfill Übungsblatt \@exnr}\newline
+
+    \ownline
+    Prof. Dr. Abhinav Sharma \\
+    Pranay Jaiswal \\
+    Tanja Schoger
+
+    Bearbeitet von \@author
+}
+\makeatother
