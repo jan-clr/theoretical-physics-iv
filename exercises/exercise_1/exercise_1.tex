@@ -1,3 +1,4 @@
+
 \documentclass[
     headings=optiontohead,              % allows double headers
     12pt,                               % fontsize 
@@ -7,7 +8,7 @@
     BCOR=00mm,                          % correction that accounts for the center of the pages being glued in
     toc=bibliographynumbered,            % bibliography gets a number and is listed in the table of contents
     parskip=half,                       % paragraph spacing
-]{scrarticle}
+]{scrreprt}
 
 \usepackage[english]{babel}                     % font that supports English
 \usepackage{upgreek}                            % non-cursive Greek letters
@@ -48,47 +49,34 @@
 \usepackage[toc, page]{appendix}
 %\usepackage{parskip}
 \usepackage{tcolorbox}                          % Color boxes
+\usepackage{enumitem}
 
-\title{Notes for the lecture about Theoretical Electrodynamics}
+\input{../../config/config}                                  % another file that holds the package/document configuration
+\input{../../config/format}                                  % another file that holds format information
+\input{../../config/commands}                                % another file that holds predefined commands
+
+\exnr{1}
 \author{Jan Claar}
-\date{March 01, 2023}
-
-\input{config/config}                                  % another file that holds the package/document configuration
-\input{config/format}                                  % another file that holds format information
-\input{config/commands}                                % another file that holds predefined commands
+\date{\today}
 
 \begin{document}
-    \tableofcontents
-    \newpage
+    \head
 
-    \section{Lecture Information} % (fold)
-    \label{sec:Lecture Information}
+    \exrcise{1}
 
-    Lecturer: Abhinav Sharma (Abhi)
-    
-    Room: R 516
-
-    Griffiths "Introduction to Electrodynamics" - Textbook
-
-    Jackson "Classical Electrodynamics" - Reference text
-
-    Feynman Lectures "Volume II" - Supplementary
-            
-    \chapter{Laws of Electrodynamics} % (fold)
-    \label{cha:Laws of Electrodynamics}
-    
-Laws of Electrodynamics    % section Lecture Information (end)
-
-    \section{Introduction} % (fold)
-    \label{sec:Introduction}
-
-    % section Introduction (end)
-
-    % chapter Laws of ELectrodynamics (end)
-
-    \chapter{Electromagnetism in matter} % (fold)
-    \label{cha:Electromagnetism in matter}
-    
-    % chapter Electromagnetism in matter (end)
-
+    \begin{enumerate}[label=\alph*)]
+         \item 
+             \begin{align*}
+                 \grad(\vb{r}\cdot \vb{k}) &= \hat{\vb{e}}_\mathrm{x}\partial_{x} x k_\mathrm{x} +  \hat{\vb{e}}_\mathrm{y}\partial_{y} y k_\mathrm{y} +\hat{\vb{e}}_\mathrm{z}\partial_{z} z k_\mathrm{z} \\
+                &= \hat{\vb{e}}_\mathrm{x}k_\mathrm{x} +  \hat{\vb{e}}_\mathrm{y}k_\mathrm{y} +\hat{\vb{e}}_\mathrm{z} k_\mathrm{z} \\
+                &= \vb{k}
+             \end{align*}
+        \item 
+            \begin{align*}
+                \grad\left(\frac{1}{|\vb{r}-\vb{k}|}\right) &= \grad[(x -k_\mathrm{x})^2 + (y - k_\mathrm{y})^2 + (z - k_\mathrm{z})^2]^{-\frac{1}{2}} \\
+                &= [ 2(x - k_\mathrm{x})\hat{\vb{e}}_\mathrm{x} + 2(y - k_\mathrm{y})\hat{\vb{e}}_\mathrm{y} +2(z - k_\mathrm{z})\hat{\vb{e}}_\mathrm{z}] \\
+                &\cdot \frac{-1}{2}[(x -k_\mathrm{x})^2 + (y - k_\mathrm{y})^2 + (z - k_\mathrm{z})^2]^{-\frac{3}{2}} \\
+                &= -\displaystyle\frac{\vb{r}- \vb{k}}{|\vb{r} - \vb{k}|^3}
+            \end{align*}
+    \end{enumerate}    
 \end{document}
